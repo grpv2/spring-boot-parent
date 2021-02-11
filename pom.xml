@@ -14,7 +14,7 @@
   <repositories>
   <repository>
     <id>gitlab-maven</id>
-    <url>${env.CI_SERVER_URL}/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven</url>
+    <url>${env.CI_SERVER_URL}/api/v4/projects/24117067/packages/maven</url>
   </repository>
 </repositories>
 <distributionManagement>
