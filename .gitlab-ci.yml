@@ -9,11 +9,11 @@
 # * Verify but don't deploy merge requests.
 # * Deploy built artifacts from master branch only.
 
-include:
-  - template: Security/Dependency-Scanning.gitlab-ci.yml
-  - template: Security/License-Scanning.gitlab-ci.yml
-  - template: Security/SAST.gitlab-ci.yml
-  - template: Security/Secret-Detection.gitlab-ci.yml
+#include:
+#  - template: Security/Dependency-Scanning.gitlab-ci.yml
+#  - template: Security/License-Scanning.gitlab-ci.yml
+#  - template: Security/SAST.gitlab-ci.yml
+#  - template: Security/Secret-Detection.gitlab-ci.yml
 
 variables:
   # This will suppress any download for dependencies and plugins or upload messages which would clutter the console log.
