@@ -8,7 +8,7 @@
     <version>1.0.8</version>
   </parent>
 
-  <groupId>com.example.dep</groupId>
+  <groupId>com.poc</groupId>
   <artifactId>simple-maven-dep</artifactId>
   <packaging>jar</packaging>
   <version>1.0</version>
