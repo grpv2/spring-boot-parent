@@ -1,4 +1,10 @@
 <settings xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<pluginGroups>
+  </pluginGroups>
+          
+  <proxies>
+  </proxies>
+          
   <servers>
     <server>
       <id>gitlab-maven</id>
@@ -6,10 +12,23 @@
         <httpHeaders>
           <property>
             <name>Job-Token</name>
-            <value>${env.CI_JOB_TOKEN}</value>
+            <value>${CI_JOB_TOKEN}</value>
           </property>
         </httpHeaders>
       </configuration>
     </server>
+    <server>
+      <id>gitlab</id>  
+      <username>${GITLAB_USER_LOGIN}</username>  
+      <password>${GITLAB_PRIVATE_TOKEN}</password>  
+    </server>
   </servers>
+
+  <mirrors>
+  </mirrors>
+  
+ 
+  <profiles>
+  </profiles>
+
 </settings>
