@@ -1,6 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.poc</groupId>
+    <artifactId>helloworld</artifactId>
+    <version>1.0.4</version>
+  </parent>
+
   <groupId>com.example.dep</groupId>
   <artifactId>simple-maven-dep</artifactId>
   <packaging>jar</packaging>
@@ -10,24 +17,10 @@
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <plugin.release.version>2.5.3</plugin.release.version>
+    <plugin.scm.version>1.11.2</plugin.scm.version>
   </properties>
-  <repositories>
 
-  <repository>
-    <id>gitlab-maven</id>
-    <url>${env.CI_SERVER_URL}/api/v4/projects/24117067/packages/maven</url>
-  </repository>
-</repositories>
-<distributionManagement>
-  <repository>
-    <id>gitlab-maven</id>
-    <url>${env.CI_SERVER_URL}/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven</url>
-  </repository>
-  <snapshotRepository>
-    <id>gitlab-maven</id>
-    <url>${env.CI_SERVER_URL}/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven</url>
-  </snapshotRepository>
-</distributionManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -42,4 +35,19 @@
         <version>1.3.0</version>
     </dependency>
   </dependencies>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-release-plugin</artifactId>
+      <version>${plugin.release.version}</version>
+      <configuration>
+            <scmCommentPrefix>[ci skip] [maven-release-plugin]</scmCommentPrefix>
+      </configuration>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-scm-plugin</artifactId>
+      <version>${plugin.scm.version}</version>
+    </plugin>
+  </plugins>
 </project>
