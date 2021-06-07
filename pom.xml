@@ -25,7 +25,8 @@
   <repositories>
     <repository>
       <id>gitlab-maven</id>
-      <url>${gitlab.instance.mvn.endpoint}</url>
+      <!--url>${gitlab.instance.mvn.endpoint}</url-->
+      <url>https://gitlab.com/api/v4/projects/27207640/packages/maven</url>
     </repository>
   </repositories>
 
