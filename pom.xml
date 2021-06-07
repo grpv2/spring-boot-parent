@@ -15,11 +15,19 @@
   <name>simple-maven-dep</name>
   <url>http://maven.apache.org</url>
   <properties>
+    <gitlab.instance.mvn.endpoint>${CI_API_V4_URL}/packages/maven</gitlab.instance.mvn.endpoint>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <plugin.release.version>2.5.3</plugin.release.version>
     <plugin.scm.version>1.11.2</plugin.scm.version>
   </properties>
+  
+  <repositories>
+    <repository>
+      <id>gitlab-maven</id>
+      <url>${gitlab.instance.mvn.endpoint}</url>
+    </repository>
+  </repositories>
 
   <dependencies>
     <dependency>
