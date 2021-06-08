@@ -10,7 +10,7 @@
   <description>DWS Spring Boot Parent</description>
 
   <parent>
-      <groupId>com.rbs.dws</groupId>
+      <groupId>com.poc.dws</groupId>
       <artifactId>dws-spring-boot-dependencies</artifactId>
       <version>1.1.6</version>
   </parent>
