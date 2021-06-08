@@ -36,12 +36,11 @@
   </mirrors>
  
   <profiles>
-    <profile>
+    <!--profile>
       <id>gitlab</id>
       <repositories>
         <repository>
-          <id>gitlab-maven</id>
-          <!--url>${gitlab.instance.mvn.endpoint}</url-->
+          <id>gitlab-maven</id>          
           <url>https://gitlab.com/api/v4/groups/natwestgroup/-/packages/maven</url>
           <layout>default</layout>
           <releases>
@@ -56,11 +55,11 @@
           </snapshots>
         </repository>
       </repositories>
-    </profile>
+    </profile-->
   </profiles>
 
-  <activeProfiles>
+  <!--activeProfiles>
       <activeProfile>gitlab</activeProfile>
-  </activeProfiles>
+  </activeProfiles-->
 
 </settings>
