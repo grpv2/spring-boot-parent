@@ -48,8 +48,8 @@
     </profile>
   </profiles>
 
-    <!--activeProfiles>
+    <activeProfiles>
         <activeProfile>artifactory</activeProfile>
-    </activeProfiles-->
+    </activeProfiles>
 
 </settings>
