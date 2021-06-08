@@ -35,7 +35,7 @@
         <repositories>
           <repository>
             <id>gitlab-maven</id>
-            <url>https://gitlab.example.com/api/v4/groups/natwestgoup/dws/-/packages/maven</url>
+            <url>https://gitlab.example.com/api/v4/groups/natwestgroup/dws/-/packages/maven</url>
           </repository>
         </repositories>
     </profile>
