@@ -23,7 +23,8 @@
     <plugin.scm.version>1.11.2</plugin.scm.version>
   </properties>
   
-  <repository>
+  </repositories>
+    <repository>
       <id>gitlab-maven</id>
       <!--url>${gitlab.instance.mvn.endpoint}</url-->
       <url>https://gitlab.com/api/v4/groups/natwestgroup/-/packages/maven</url>
