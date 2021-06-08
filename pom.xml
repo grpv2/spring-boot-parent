@@ -22,7 +22,14 @@
     <plugin.release.version>2.5.3</plugin.release.version>
     <plugin.scm.version>1.11.2</plugin.scm.version>
   </properties>
-    
+  
+  <repository>
+      <id>gitlab-maven</id>
+      <!--url>${gitlab.instance.mvn.endpoint}</url-->
+      <url>https://gitlab.com/api/v4/groups/natwestgroup/-/packages/maven</url>
+    </repository>
+  </repositories>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
