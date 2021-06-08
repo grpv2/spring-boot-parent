@@ -11,7 +11,7 @@
   <groupId>com.poc</groupId>
   <artifactId>simple-maven-dep</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>simple-maven-dep</name>
   <url>http://maven.apache.org</url>
   <properties>
