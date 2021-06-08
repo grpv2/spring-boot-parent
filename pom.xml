@@ -23,7 +23,7 @@
     <plugin.scm.version>1.11.2</plugin.scm.version>
   </properties>
   
-  </repositories>
+  <repositories>
     <repository>
       <id>gitlab-maven</id>
       <!--url>${gitlab.instance.mvn.endpoint}</url-->
