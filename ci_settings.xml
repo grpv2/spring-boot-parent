@@ -27,18 +27,25 @@
   </servers>
 
   <mirrors>
-  </mirrors>  
+    <mirror>
+      <id>dws-all-repos-mirror</id>
+      <name>DWS Gitlab Maven</name>
+      <url>https://gitlab.com/api/v4/groups/natwestgroup/-/packages/maven</url>
+      <mirrorOf>gitlab-maven</mirrorOf>
+    </mirror>
+  </mirrors>
  
   <profiles>
-    <!--profile>
+    <profile>
       <id>artifactory</id>
         <repositories>
-          <repository>
-            <id>gitlab-maven</id>
-            <url>https://gitlab.example.com/api/v4/groups/natwestgroup/-/packages/maven</url>
-          </repository>
+            <repository>
+             <id>gitlab-maven</id>
+             <!--url>${gitlab.instance.mvn.endpoint}</url-->
+             <url>https://gitlab.com/api/v4/groups/natwestgroup/-/packages/maven</url>
+           </repository>
         </repositories>
-    </profile-->
+    </profile>
   </profiles>
 
     <!--activeProfiles>
