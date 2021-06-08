@@ -2,34 +2,27 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <artifactId>dws-spring-boot-parent</artifactId>
+  <version>1.1.8-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>${project.artifactId}</name>
+  <description>DWS Spring Boot Parent</description>
+
   <parent>
-    <groupId>com.poc</groupId>
-    <artifactId>helloworld</artifactId>
-    <version>1.0.8</version>
+      <groupId>com.rbs.dws</groupId>
+      <artifactId>dws-spring-boot-dependencies</artifactId>
+      <version>1.1.6</version>
   </parent>
 
-  <groupId>com.poc</groupId>
-  <artifactId>simple-maven-dep</artifactId>
-  <packaging>jar</packaging>
-  <version>1.0.0-SNAPSHOT</version>
-  <name>simple-maven-dep</name>
   <url>http://maven.apache.org</url>
   <properties>
-    <gitlab.instance.mvn.endpoint>${CI_API_V4_URL}/packages/maven</gitlab.instance.mvn.endpoint>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <plugin.release.version>2.5.3</plugin.release.version>
     <plugin.scm.version>1.11.2</plugin.scm.version>
   </properties>
-  
-  <repositories>
-    <repository>
-      <id>gitlab-maven</id>
-      <!--url>${gitlab.instance.mvn.endpoint}</url-->
-      <url>https://gitlab.example.com/api/v4/packages/maven</url>
-    </repository>
-  </repositories>
-
+    
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
