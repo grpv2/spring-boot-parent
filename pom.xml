@@ -17,6 +17,8 @@
 
   <url>http://maven.apache.org</url>
   <properties>
+    <!-->MAVEN REPO URL FOR DISTRIBUTION MANAGEMENT<-->
+    <gitlab.mvn.repo.url>${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/maven</gitlab.mvn.repo.url>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <plugin.release.version>2.5.3</plugin.release.version>
