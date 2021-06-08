@@ -30,7 +30,7 @@
   </mirrors>  
  
   <profiles>
-    <profile>
+    <!--profile>
       <id>artifactory</id>
         <repositories>
           <repository>
@@ -38,11 +38,11 @@
             <url>https://gitlab.example.com/api/v4/groups/natwestgroup/-/packages/maven</url>
           </repository>
         </repositories>
-    </profile>
+    </profile-->
   </profiles>
 
-    <activeProfiles>
+    <!--activeProfiles>
         <activeProfile>artifactory</activeProfile>
-    </activeProfiles>
+    </activeProfiles-->
 
 </settings>
