@@ -27,10 +27,22 @@
   </servers>
 
   <mirrors>
-  </mirrors>
-  
+  </mirrors>  
  
   <profiles>
+    <profile>
+      <id>artifactory</id>
+        <repositories>
+          <repository>
+            <id>gitlab-maven</id>
+            <url>https://gitlab.example.com/api/v4/groups/natwestgoup/dws/-/packages/maven</url>
+          </repository>
+        </repositories>
+    </profile>
   </profiles>
+
+    <activeProfiles>
+        <activeProfile>artifactory</activeProfile>
+    </activeProfiles>
 
 </settings>
