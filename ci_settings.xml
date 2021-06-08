@@ -37,19 +37,30 @@
  
   <profiles>
     <profile>
-      <id>artifactory</id>
-        <repositories>
-            <repository>
-             <id>gitlab-maven</id>
-             <!--url>${gitlab.instance.mvn.endpoint}</url-->
-             <url>https://gitlab.com/api/v4/groups/natwestgroup/-/packages/maven</url>
-           </repository>
-        </repositories>
+      <id>gitlab</id>
+      <repositories>
+        <repository>
+          <id>gitlab-maven</id>
+          <!--url>${gitlab.instance.mvn.endpoint}</url-->
+          <url>https://gitlab.com/api/v4/groups/natwestgroup/-/packages/maven</url>
+          <layout>default</layout>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>daily</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </snapshots>
+        </repository>
+      </repositories>
     </profile>
   </profiles>
 
-    <activeProfiles>
-        <activeProfile>artifactory</activeProfile>
-    </activeProfiles>
+  <activeProfiles>
+      <activeProfile>gitlab</activeProfile>
+  </activeProfiles>
 
 </settings>
