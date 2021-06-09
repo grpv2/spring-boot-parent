@@ -38,7 +38,7 @@
   <profiles>
     <profile>
       <id>gitlab</id>
-      <repositories>
+      <!--repositories>
         <repository>
           <id>gitlab-maven</id>          
           <url>https://gitlab.com/api/v4/groups/12324030/-/packages/maven</url>
@@ -54,7 +54,7 @@
             <checksumPolicy>fail</checksumPolicy>
           </snapshots>
         </repository>
-      </repositories>
+      </repositories-->
     </profile>
   </profiles>
 
