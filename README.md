@@ -14,7 +14,7 @@
     </configuration>
 </plugin>
 ```
-* scm connection must be defiend in pom
+* scm connection must be defined in pom for mvn release
 ```
 <scm>
     <developerConnection>scm:git:${CI_PROJECT_URL}.git</developerConnection>
