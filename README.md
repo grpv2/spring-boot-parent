@@ -22,7 +22,7 @@
 </scm>
 ```
 
-## Use dws dependency in your project
+## Use this group's dependency in your project
 This can be done in two ways:
 * **Using pom.xml** 
 ```
@@ -32,10 +32,10 @@ This can be done in two ways:
   </repository>
 </repositories>
 ```
-where gitlabProjectID is project ID for DWS on gitlab and YOUR-UNIQ-ID can be ID of your choice.
+where `gitlabProjectID` is project ID for this group on gitlab and YOUR-UNIQ-ID can be ID of your choice.
 
 * **Using settings.xml/ci_settings.xml**
-1. under repositories
+1. under `repositories`
 ```
 <repository>
     <id>YOUR-UNIQ-ID</id>
@@ -54,7 +54,7 @@ where gitlabProjectID is project ID for DWS on gitlab and YOUR-UNIQ-ID can be ID
     </snapshots>
 </repository>
 ```
-2. under pluginRepositories
+2. under `pluginRepositories`
 ```
 <pluginRepository>
     <id>YOUR-UNIQ-ID</id> 
@@ -74,7 +74,7 @@ where gitlabProjectID is project ID for DWS on gitlab and YOUR-UNIQ-ID can be ID
     </pluginRepository>
 ```
 
-where gitlabProjectID is project ID for DWS on gitlab and YOUR-UNIQ-ID can be ID of your choice.
+where `gitlabProjectID` is project ID for this group on gitlab and YOUR-UNIQ-ID can be ID of your choice.
 
 For both methods you need to add server config in `<servers>` tag of `settings.xml/ci_settings.xml`.
 ID must be same for repositories added in pom.xml/settings.xml.
@@ -93,3 +93,5 @@ For other options please check [here](https://docs.gitlab.com/ee/user/packages/m
     </configuration>
 </server>
 ```
+**If you dont want to add reositories for whole group, you can use url for this project instead of groups in `url` tag
+[ref](https://docs.gitlab.com/ee/user/packages/maven_repository/index.html#project-level-maven-endpoint)**
