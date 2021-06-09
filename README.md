@@ -14,3 +14,10 @@
     </configuration>
 </plugin>
 ```
+* scm connection must be defiend in pom
+```
+<scm>
+    <developerConnection>scm:git:${CI_PROJECT_URL}.git</developerConnection>
+    <tag>HEAD</tag>
+</scm>
+```

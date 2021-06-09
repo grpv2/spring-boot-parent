@@ -19,11 +19,11 @@
         </httpHeaders>
       </configuration>
     </server>
-    <server>
+    <!--server>
       <id>gitlab</id>  
       <username>${GITLAB_USER_LOGIN}</username>  
       <password>${GITLAB_MAVEN_PRIVATE_TOKEN}</password>  
-    </server>
+    </server-->
   </servers>
 
   <mirrors>
