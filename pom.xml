@@ -32,6 +32,13 @@
       <url>https://gitlab.com/api/v4/groups/12324030/-/packages/maven</url>
     </repository>
   </repositories-->
+  
+  <scm>
+    <developerConnection>scm:git:${CI_PROJECT_URL}.git</developerConnection>
+    <!--connection>scm:git:origin</connection-->
+    <!--connection>scm:git:ssh://git@gitlab.com:natwestgroup/maven-helloworld.git</connection-->
+    <tag>HEAD</tag>
+  </scm>
 
   <dependencies>
     <dependency>
