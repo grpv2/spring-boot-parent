@@ -22,7 +22,7 @@
     <server>
       <id>gitlab</id>  
       <username>${GITLAB_USER_LOGIN}</username>  
-      <password>${CI_JOB_TOKEN}</password>  
+      <password>${GITLAB_MAVEN_PRIVATE_TOKEN}</password>  
     </server>
   </servers>
 
