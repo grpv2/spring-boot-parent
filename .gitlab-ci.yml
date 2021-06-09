@@ -65,7 +65,7 @@ deploy:jdk8:
 integrtaion_test:jdk8:
   stage: test
   script:
-    - 'mvn $MAVEN_CLI_OPTS test-compile failsafe:integration-test failsafe:verify'
+    - 'mvn $MAVEN_CLI_OPTS test-compile failsafe:integration-test failsafe:verify -s ci_settings.xml'
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       when: manual
