@@ -34,7 +34,8 @@
       <id>gitlab</id>
       <repositories>
         <repository>
-          <id>gitlab-maven</id>          
+          <id>gitlab-maven</id>
+          <!-->must use group ID of gitlab group not name<-->       
           <url>https://gitlab.com/api/v4/groups/12324030/-/packages/maven</url>
           <layout>default</layout>
           <releases>
