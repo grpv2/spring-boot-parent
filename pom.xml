@@ -23,6 +23,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <plugin.release.version>2.5.3</plugin.release.version>
     <plugin.scm.version>1.11.2</plugin.scm.version>
+    <project.scm.id>gitlab</project.scm.id>
   </properties>
 
   <!--repositories>
