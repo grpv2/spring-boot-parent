@@ -22,7 +22,7 @@
 </scm>
 ```
 
-## use dws dependency in your project
+## Use dws dependency in your project
 This can be done in two ways:
 * **Using pom.xml** 
 ```
@@ -35,40 +35,42 @@ This can be done in two ways:
 where <gitlabProjectID> is project ID for DWS on gitlab and YOUR-UNIQ-ID can be ID of your choice.
 
 * **Using settings.xml/ci_settings.xml**
-1. under `<repositories>`
-```<repository>
-        <id>YOUR-UNIQ-ID</id>
-        <!-->must use group ID of gitlab group not name<-->       
-        <url>https://gitlab.com/api/v4/groups/<gitlabProjectID>/-/packages/maven</url>
-        <layout>default</layout>
-        <releases>
-        <enabled>true</enabled>
-        <updatePolicy>daily</updatePolicy>
-        <checksumPolicy>fail</checksumPolicy>
-        </releases>
-        <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>always</updatePolicy>
-        <checksumPolicy>fail</checksumPolicy>
-        </snapshots>
-    </repository>
+1. under <repositories>
 ```
-2. under `<pluginRepositories>`
-```<pluginRepository>
-        <id>YOUR-UNIQ-ID</id> 
-        <name>gitlab-maven-plugins</name>
-        <url>https://gitlab.com/api/v4/groups/<gitlabProjectID>/-/packages/maven</url>
-        <layout>default</layout>
-        <releases>
+<repository>
+    <id>YOUR-UNIQ-ID</id>
+    <!-->must use group ID of gitlab group not name<-->       
+    <url>https://gitlab.com/api/v4/groups/<gitlabProjectID>/-/packages/maven</url>
+    <layout>default</layout>
+    <releases>
         <enabled>true</enabled>
         <updatePolicy>daily</updatePolicy>
         <checksumPolicy>fail</checksumPolicy>
-        </releases>
-        <snapshots>
+    </releases>
+    <snapshots>
         <enabled>true</enabled>
         <updatePolicy>always</updatePolicy>
         <checksumPolicy>fail</checksumPolicy>
-        </snapshots>
+    </snapshots>
+</repository>
+```
+2. under <pluginRepositories>
+```
+<pluginRepository>
+    <id>YOUR-UNIQ-ID</id> 
+    <name>gitlab-maven-plugins</name>
+    <url>https://gitlab.com/api/v4/groups/<gitlabProjectID>/-/packages/maven</url>
+    <layout>default</layout>
+    <releases>
+        <enabled>true</enabled>
+        <updatePolicy>daily</updatePolicy>
+        <checksumPolicy>fail</checksumPolicy>
+    </releases>
+    <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+        <checksumPolicy>fail</checksumPolicy>
+    </snapshots>
     </pluginRepository>
 ```
 
