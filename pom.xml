@@ -25,12 +25,12 @@
     <plugin.scm.version>1.11.2</plugin.scm.version>
   </properties>
 
-  <repositories>
+  <!--repositories>
     <repository>
       <id>gitlab-maven</id>          
       <url>https://gitlab.com/api/v4/groups/12324030/-/packages/maven</url>
     </repository>
-  </repositories>
+  </repositories-->
 
   <dependencies>
     <dependency>
