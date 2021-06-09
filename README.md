@@ -93,5 +93,5 @@ For other options please check [here](https://docs.gitlab.com/ee/user/packages/m
     </configuration>
 </server>
 ```
-**If you dont want to add reositories for whole group, you can use url for this project instead of groups in `url` tag.
+**If you dont want to add repsitories reference for whole group, you can use just url for this project instead of groups in `url` tag.
 [reference](https://docs.gitlab.com/ee/user/packages/maven_repository/index.html#project-level-maven-endpoint)**
