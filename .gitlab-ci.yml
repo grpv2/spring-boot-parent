@@ -33,12 +33,17 @@ stages:
   - test
   - release
 
+before_script:
+  - if [ ! -f ci_settings.xml ];
+        then echo "[ ERROR ]:CI settings missing\!"; exit 1;
+      fi ;
+
 # For merge requests do not `deploy` but only run `verify`.
 # See https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
 .verify: &verify
   stage: build
   script:
-    - 'mvn $MAVEN_CLI_OPTS install'
+    - 'mvn $MAVEN_CLI_OPTS install -s ci_settings.xml'
   except:
     variables:
       - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
@@ -51,10 +56,6 @@ verify:jdk8:
 # For deploying packages to GitLab's Maven Repository: See https://docs.gitlab.com/ee/user/packages/maven_repository/index.html#create-maven-packages-with-gitlab-cicd for more details.
 # Please note: The GitLab Maven Repository is currently only available in GitLab Premium / Ultimate.
 # For `master` branch run `mvn deploy` automatically.
-before_script:
-  - if [ ! -f ci_settings.xml ];
-        then echo "[ ERROR ]:CI settings missing\!"; exit 1;
-      fi ;
 
 deploy:jdk8:
   stage: deploy
