@@ -18,7 +18,7 @@ jobs:
     - name: Deploy
       run: mvn -B clean deploy -s ci_settings.xml
       env:
-          maven_access_user: ${{ secrets.GITLAB_SVC_USER }}
+          maven_access_user: ${{ secrets.GITHUB_SVC_USER }}
           maven_access_token: ${{ secrets.GITHUB_TOKEN }}
 #          github_repository_owner: ${{ github.repository_owner }} 
 #          github_repository_name: ${{ github.event.repository.name }}
