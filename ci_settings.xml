@@ -9,7 +9,7 @@
     <server>
       <id>github-maven</id>
       <!--username>${env.github_repository_owner}</username-->
-      <username>${env.maven_access_user}</username>
+      <!--username>${env.maven_access_user}</username-->
       <password>${env.maven_access_token}</password>
     </server>
     <server>
