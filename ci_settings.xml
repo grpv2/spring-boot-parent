@@ -18,7 +18,8 @@
       <password>${env.maven_access_token}</password>
     </server>
     <server>
-      <id>github</id>  
+      <id>github</id>
+      <!-- for scm operations by release plugin -->
       <username>${env.maven_access_user}</username>  
       <password>${env.maven_access_token}</password>  
     </server>
@@ -32,8 +33,10 @@
       <id>github</id>
       <repositories>
         <repository>
+          
           <id>github-grpv1-maven</id>
-          <!-->must use group ID of github group<-->       
+          <!-->must use group ID of github group<-->  
+          <!-- you will need to specify username password for this in servers section-->
           <url>https://maven.pkg.github.com/grpv1/*</url>
           <layout>default</layout>
           <releases>
