@@ -20,7 +20,6 @@
     <server>
       <id>github</id>
       <!-- for scm operations by release plugin -->
-      
       <password>${env.maven_access_token}</password>  
     </server>
   </servers>
