@@ -1,40 +1,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>dws-spring-boot-parent</artifactId>
+  <artifactId>gprv1-spring-boot-parent</artifactId>
   <version>1.1.11-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>${project.artifactId}</name>
-  <description>DWS Spring Boot Parent</description>
+  <description>GRPV1 Spring Boot Parent</description>
 
   <parent>
-    <groupId>com.poc.dws</groupId>
-    <artifactId>dws-spring-boot-dependencies</artifactId>
-    <version>1.1.12</version>
+    <groupId>com.poc.gprv1</groupId>
+    <artifactId>gprv1-spring-boot-dependencies</artifactId>
+    <version>1.1.20</version>
   </parent>
 
   <url>http://maven.apache.org</url>
   <properties>
     <!-->MAVEN REPO URL FOR DISTRIBUTION MANAGEMENT<-->
-    <gitlab.mvn.repo.url>${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/maven</gitlab.mvn.repo.url>
+    <github.mvn.repo.url>https://maven.pkg.github.com/${GITHUB_REPOSITORY}</github.mvn.repo.url>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <plugin.release.version>2.5.3</plugin.release.version>
     <plugin.scm.version>1.11.2</plugin.scm.version>
   </properties>
-
-  <!--repositories>
-    <repository>
-      <id>gitlab-maven</id>          
-      <url>https://gitlab.com/api/v4/groups/12324030/-/packages/maven</url>
-    </repository>
-  </repositories-->
   
   <scm>
-    <developerConnection>scm:git:${CI_PROJECT_URL}.git</developerConnection>
-    <!--connection>scm:git:origin</connection-->
-    <!--connection>scm:git:ssh://git@gitlab.com:natwestgroup/maven-helloworld.git</connection-->
+    <developerConnection>scm:git:${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
