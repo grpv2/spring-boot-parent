@@ -19,6 +19,11 @@
       <username>${env.maven_access_user}</username>
       <password>${env.maven_access_token}</password>
     </server>
+    <server>
+      <id>github-grpv2-maven</id>
+      <username>${env.maven_access_user}</username>
+      <password>${env.maven_access_token}</password>
+    </server>
    <!-- for scm operations by release plugin -->
     <server>
       <id>github</id>      
@@ -34,12 +39,28 @@
     <profile>
       <id>github</id>
       <repositories>
-        <repository>
-          
+        <repository>          
           <id>github-grpv1-maven</id>
           <!-->must use group ID of github group<-->  
           <!-- you will need to specify username password for this in servers section-->
           <url>https://maven.pkg.github.com/grpv1/*</url>
+          <layout>default</layout>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>daily</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </snapshots>
+        </repository>
+        <repository>          
+          <id>github-grpv2-maven</id>
+          <!-->must use group ID of github group<-->  
+          <!-- you will need to specify username password for this in servers section-->
+          <url>https://maven.pkg.github.com/grpv2/*</url>
           <layout>default</layout>
           <releases>
             <enabled>true</enabled>
@@ -58,6 +79,22 @@
           <id>gitlab-grpv1-maven</id> 
           <name>grpv1-maven-plugins</name>
           <url>https://maven.pkg.github.com/grpv1/*</url>
+          <layout>default</layout>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>daily</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>gitlab-grpv2-maven</id> 
+          <name>grpv1-maven-plugins</name>
+          <url>https://maven.pkg.github.com/grpv2/*</url>
           <layout>default</layout>
           <releases>
             <enabled>true</enabled>
