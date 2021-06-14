@@ -17,10 +17,8 @@ jobs:
         distribution: 'adopt'
     - name: Release
       run: |
-        echo "my name is ${GITHUB_SVC_USER}"
-        git config user.name "${GITHUB_SVC_USER}"; git config user.email "${GITHUB_SVC_USER}@users.noreply.github.com"
+        git config user.name "${{ secret.SVC_GITHUB_USER }}"; git config user.email "${{ secret.SVC_GITHUB_USER }}@users.noreply.github.com"
         mvn -B release:prepare -s ci_settings.xml
         mvn -B release:perform -s ci_settings.xml
       env:
-          maven_access_user: ${GITHUB_SVC_USER}
           maven_access_token: ${{ secrets.GITHUB_TOKEN }}
