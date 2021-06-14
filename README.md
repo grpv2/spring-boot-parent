@@ -85,4 +85,4 @@ Here is an example.
       <password>${env.maven_access_token}</password>
 </server>
 ```
-**If you dont want to add repsitories reference for whole group, you can use just url for this repository instead of groups in `url` tag.
+**If you dont want to add repsitories reference for whole group, you can use just url for this repository instead of groups in `url` tag.**
