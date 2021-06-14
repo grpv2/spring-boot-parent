@@ -21,5 +21,5 @@ jobs:
         mvn -B release:prepare -s ci_settings.xml
         mvn -B release:perform -s ci_settings.xml
       env:
-          maven_access_user: ${{ secrets.GITLAB_SVC_USER }}
+          maven_access_user: ${{ secrets.GITHUB_SVC_USER }}
           maven_access_token: ${{ secrets.GITHUB_TOKEN }}
