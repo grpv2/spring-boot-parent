@@ -14,7 +14,7 @@
     </server>
     <server>
       <id>github-grpv1-maven</id>
-      <!--username>${env.maven_access_user}</username-->
+      <username>${env.maven_access_user}</username>
       <password>${env.maven_access_token}</password>
     </server>
     <server>
