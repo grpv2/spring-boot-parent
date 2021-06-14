@@ -7,19 +7,22 @@
           
  <servers>
     <server>
+      <!-- for distribution management -->
       <id>github-maven</id>
       <!--username>${env.github_repository_owner}</username-->
-      <!--username>${env.maven_access_user}</username-->
+      <username>${env.maven_access_user}</username>
       <password>${env.maven_access_token}</password>
     </server>
+   <!-- for dependency and plugin management -->
     <server>
       <id>github-grpv1-maven</id>
       <username>${env.maven_access_user}</username>
       <password>${env.maven_access_token}</password>
     </server>
+   <!-- for scm operations by release plugin -->
     <server>
-      <id>github</id>
-      <!-- for scm operations by release plugin -->
+      <id>github</id>      
+      <username>${env.maven_access_user}</username>
       <password>${env.maven_access_token}</password>  
     </server>
   </servers>
